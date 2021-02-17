@@ -58,6 +58,7 @@ defining them in this alist."
     ("simplicity-red"           . "#ff25a9")
     ("simplicity-green"         . "#47d400")
     ("simplicity-magenta"       . "#d409fb")
+    ("simplicity-orange"        . "#ff5f00")
     ("simplicity-blue"          . "#68afff")
     ("simplicify-menu-bg"       . "#fffcb9")
     ("simplicity-comment-slate" . "#595959")
@@ -65,7 +66,6 @@ defining them in this alist."
     ("simplicity-mid-gray"      . "#555555")
     ("simplicity-string"        . "#bdbdbd")
     ("simplicity-mode-back"     . "#1A1A1A")
-    ("simplicity-paren"         . "#ff8d00")
     ("simplicity-menu-bg"       . "#fffcb9")
     ("simplicity-search-2-fg"   . "#010029"))
   "List of Simplicity colors.")
@@ -225,8 +225,61 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(rainbow-delimiters-depth-3-face ((t (:foreground ,simplicity-magenta))))
    `(rainbow-delimiters-depth-4-face ((t (:foreground ,simplicity-cyan))))
    `(rainbow-delimiters-depth-5-face ((t (:foreground ,simplicity-yellow))))
-   `(rainbow-delimiters-depth-6-face ((t (:foreground ,simplicity-red)))))
-  )
+   `(rainbow-delimiters-depth-6-face ((t (:foreground ,simplicity-red))))
+   ;; dired
+   `(dired-directory
+     ((t (:background ,simplicity-background
+          :foreground ,simplicity-orange))))
+   `(dired-header
+     ((t (:background ,simplicity-background
+          :foreground ,simplicity-yellow))))
+   ;; diredfl
+   `(diredfl-dir-name ((t (:inherit dired-directory))))
+   `(diredfl-dir-heading ((t (:inherit dired-header))))
+   `(diredfl-exec-priv
+     ((t (:background ,simplicity-background
+          :foreground ,simplicity-red))))
+   `(diredfl-executable-tag
+     ((t (:background ,simplicity-background
+          :foreground ,simplicity-cyan))))
+   `(diredfl-read-priv
+     ((t (:background ,simplicity-background
+          :foreground ,simplicity-green))))
+   `(diredfl-write-priv
+     ((t (:background ,simplicity-background
+          :foreground ,simplicity-magenta))))
+   `(diredfl-no-priv
+     ((t (:background ,simplicity-background
+          :foreground ,simplicity-foreground))))
+   `(diredfl-rare-priv
+     ((t (:background ,simplicity-background
+          :foreground ,simplicity-magenta))))
+   `(diredfl-other-priv
+     ((t (:background ,simplicity-background
+          :foreground ,simplicity-yellow))))
+   `(diredfl-dir-priv
+     ((t (:background ,simplicity-background
+          :foreground ,simplicity-orange))))
+   `(diredfl-date-time
+     ((t (:background ,simplicity-background
+          :foreground ,simplicity-foreground))))
+   `(diredfl-file-name
+     ((t (:background ,simplicity-background
+          :foreground ,simplicity-foreground))))
+   `(diredfl-file-suffix
+     ((t (:background ,simplicity-background
+          :foreground ,simplicity-yellow))))
+   `(diredfl-number
+     ((t (:background ,simplicity-background
+          :foreground ,simplicity-foreground))))
+   `(diredfl-flag-mark
+     ((t (:background ,simplicity-background
+          :foreground ,simplicity-magenta))))
+   ;; git-gutter
+   `(git-gutter-fr:added ((t (:background ,simplicity-green))))
+   `(git-gutter-fr:modified ((t (:background ,simplicity-yellow))))
+   `(git-gutter-fr:deleted ((t (:background ,simplicity-red))))
+   ))
 
 ;;;###autoload
 (when load-file-name
