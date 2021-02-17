@@ -23,7 +23,7 @@
 ;;; Commentary:
 
 ;; A dark minimalist Emacs 24 theme.
-;; Most of the colors have been turned off, which get rids of any
+;; Most of the colors have been turned off, which gets rid of any
 ;; distraction and improve focus on reading and writing code after
 ;; getting used to it.
 
@@ -90,7 +90,9 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(default
       ((t (:background ,simplicity-background
            :foreground ,simplicity-foreground))))
-   `(cursor  ((t (:background ,simplicity-cyan))))
+   `(cursor
+     ((t (:background ,simplicity-cyan
+          :foreground ,simplicity-background))))
    `(hl-line ((t (:background ,simplicity-background))))
    `(fringe ((t (:background ,simplicity-background))))
    ;; Modeline

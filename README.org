@@ -1,3 +1,56 @@
 #+TITLE: simplicity-theme for Emacs
 
-Under development.
+Please note this theme is still under development. Also PRs & ideas are welcome.
+
+** About
+
+Simplicity is a dark minimalist Emacs theme. Most of the colors have been turned off. Only a touch of a few vivid colors remains (on stuff like errors, search, parenthesis, etc). It's my personal belief that because it gets rid of any distraction, it helps focus on reading and writing code after getting used to it. I also really like the "raw" feeling it provides.
+
+[[https://github.com/smallwat3r/simplicity-theme-emacs/blob/main/screenshots/screenshot-1.png][screenshot]
+
+** Installation
+
+*** From the Git repository
+
+Clone the repository:
+#+begin_lang shell
+git clone https://github.com/smallwat3r/simplicity-theme-emacs.git
+#+end_lang
+
+And add the following to your ~.emacs~ file:
+#+begin_lang elisp
+(add-to-list 'custom-theme-load-path "/path/to/simplicity-theme")
+(load-theme 'simplicity t)
+#+end_lang
+
+*** Doom Emacs
+
+Add the following to your ~packages.el~ file:
+#+begin_lang elisp
+(package! simplicity-theme :recipe
+  (:host github
+   :repo "smallwat3r/simplicity-theme-emacs"))
+#+end_lang
+
+Then load the theme in your ~config.el~ file:
+#+begin_lang elisp
+(setq doom-theme 'simplicity)
+#+end_lang
+
+** Customization
+
+You can tweak the theme by changing a few colors by defining new values in the ~simplicity-override-colors-alist~ variable before loading the theme.
+
+For example, for a very high contrast theme:
+#+begin_lang elisp
+(setq simplicity-override-colors-alist
+      '(("simplicity-background" . "#000000")   ; full dark bg
+        ("simplicity-foreground" . "#ffffff"))) ; full light fg
+(load-theme 'simplicity t)
+#+end_lang
+
+To see the full list of color names you can override, please consult the ~simplicity-theme.el~ source file.
+
+** License
+
+See [[https://github.com/smallwat3r/simplicity-theme-emacs/blob/main/LICENSE][LICENSE]] file.
