@@ -14,7 +14,7 @@ Simplicity is a dark minimalist Emacs theme. Most of the colors have been turned
 
 Clone the repository:
 #+begin_src shell
-git clone https://github.com/smallwat3r/simplicity-theme-emacs.git
+git clone https://github.com/smallwat3r/emacs-simplicity-theme.git
 #+end_src
 
 And add the following to your ~.emacs~ file:
@@ -29,7 +29,7 @@ Add the following to your ~packages.el~ file:
 #+begin_src emacs-lisp
 (package! simplicity-theme :recipe
   (:host github
-   :repo "smallwat3r/simplicity-theme-emacs"))
+   :repo "smallwat3r/emacs-simplicity-theme"))
 #+end_src
 
 Then load the theme in your ~config.el~ file:
@@ -53,4 +53,4 @@ To see the full list of color names you can override, please consult the ~simpli
 
 ** License
 
-See [[https://github.com/smallwat3r/simplicity-theme-emacs/blob/main/LICENSE][LICENSE]] file.
+See [[https://github.com/smallwat3r/emacs-simplicity-theme/blob/main/LICENSE][LICENSE]] file.

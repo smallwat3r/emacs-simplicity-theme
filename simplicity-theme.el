@@ -4,8 +4,8 @@
 
 ;; Author: Matthieu Petiteau <mpetiteau.pro@gmail.com>
 ;; Keywords: color, theme, minimal
-;; X-URL: http://github.com/smallwat3r/simplicity-theme-emacs
-;; URL: http://github.com/smallwat3r/simplicity-theme-emacs
+;; X-URL: http://github.com/smallwat3r/emacs-simplicity-theme
+;; URL: http://github.com/smallwat3r/emacs-simplicity-theme
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -31,13 +31,13 @@
 (unless (>= emacs-major-version 24)
   (error "Requires Emacs 24 or later"))
 
-(deftheme simplicity "A super simple theme")
+(deftheme simplicity "A dark minimalist theme")
 
 (defgroup simplicity-theme nil
   "Simplicity theme."
   :group 'faces
   :prefix "simplicity-"
-  :link '(url-link :tag "GitHub" "http://github.com/smallwat3r/simplicity-theme-emacs")
+  :link '(url-link :tag "GitHub" "http://github.com/smallwat3r/emacs-simplicity-theme")
   :tag "Simplicity theme")
 
 ;;;###autoload
