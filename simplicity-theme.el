@@ -83,8 +83,7 @@ Also bind `class' to ((class color) (min-colors 89))."
   (custom-theme-set-faces
    'simplicity
 
-   ;; -------------- Frame ---------------
-   ;; General
+;;;;; General
    `(default
       ((t (:background ,simplicity-background
            :foreground ,simplicity-foreground))))
@@ -93,7 +92,19 @@ Also bind `class' to ((class color) (min-colors 89))."
           :foreground ,simplicity-background))))
    `(hl-line ((t (:background ,simplicity-background))))
    `(fringe ((t (:background ,simplicity-background))))
-   ;; Modeline
+   `(success
+     ((t (:foreground ,simplicity-green
+          :weight bold))))
+   `(warning
+     ((t (:foreground ,simplicity-orange
+          :weight bold))))
+   `(link
+     ((t (:background ,simplicity-background
+          :foreground ,simplicity-cyan))))
+   `(link-visited
+     ((t (:background ,simplicity-background
+          :foreground ,simplicity-orange))))
+;;;;; Modeline
    `(mode-line-inactive
      ((t (:box nil
           :foreground ,simplicity-grey
@@ -102,45 +113,7 @@ Also bind `class' to ((class color) (min-colors 89))."
      ((t (:box nil
           :foreground ,simplicity-foreground
           :background ,simplicity-grey+2))))
-
-   ;; -------------- Code ----------------
-   ;; Highlight region color
-   `(region
-     ((t (:foreground ,simplicity-foreground
-          :background ,simplicity-grey+1))))
-   ;; Dir-ed search prompt
-   `(minibuffer-prompt ((default (:foreground ,simplicity-foreground))))
-   ;; Builtins
-   `(font-lock-builtin-face ((t (:foreground ,simplicity-foreground))))
-   ;; Constants
-   `(font-lock-constant-face ((t (:foreground ,simplicity-foreground))))
-   ;; Comments
-   `(font-lock-comment-face ((t (:foreground ,simplicity-grey))))
-   ;; Function names
-   `(font-lock-function-name-face ((t (:foreground ,simplicity-foreground))))
-   ;; Keywords
-   `(font-lock-keyword-face ((t (:foreground ,simplicity-foreground))))
-   ;; Strings
-   `(font-lock-string-face ((t (:foreground ,simplicity-grey-1))))
-   ;; Variables
-   `(font-lock-variable-name-face ((t (:foreground ,simplicity-foreground))))
-   `(font-lock-type-face ((t (:foreground ,simplicity-foreground))))
-   `(font-lock-warning-face ((t (:foreground ,simplicity-red :bold t))))
-   ;; Paren
-   `(show-paren-match
-     ((t (:foreground ,simplicity-background
-          :background ,simplicity-yellow-1))))
-   `(show-paren-mismatch
-     ((t (:foreground ,simplicity-red
-          :weight bold))))
-   ;; Line number
-   `(line-number
-     ((t (:background nil
-          :foreground ,simplicity-grey))))
-   `(line-number-current-line
-     ((t (:background nil
-          :foreground ,simplicity-foreground))))
-   ;; Search
+;;;;; Search
    `(isearch
      ((t (:foreground ,simplicity-background
           :background ,simplicity-yellow
@@ -152,9 +125,45 @@ Also bind `class' to ((class color) (min-colors 89))."
      ((t (:foreground ,simplicity-background
           :background ,simplicity-yellow
           :weight bold))))
+;;;;; Dir-ed search prompt
+   `(minibuffer-prompt ((default (:foreground ,simplicity-yellow))))
+;;;;; Line number
+   `(line-number
+     ((t (:background nil
+          :foreground ,simplicity-grey))))
+   `(line-number-current-line
+     ((t (:background nil
+          :foreground ,simplicity-foreground))))
 
-   ;; ------------ Packages --------------
-   ;; Ivy
+;;;;; Highlight region color
+   `(region
+     ((t (:foreground ,simplicity-foreground
+          :background ,simplicity-grey+1))))
+;;;;; Builtins
+   `(font-lock-builtin-face ((t (:foreground ,simplicity-foreground))))
+;;;;; Constants
+   `(font-lock-constant-face ((t (:foreground ,simplicity-foreground))))
+;;;;; Comments
+   `(font-lock-comment-face ((t (:foreground ,simplicity-grey))))
+;;;;; Function names
+   `(font-lock-function-name-face ((t (:foreground ,simplicity-foreground))))
+;;;;; Keywords
+   `(font-lock-keyword-face ((t (:foreground ,simplicity-foreground))))
+;;;;; Strings
+   `(font-lock-string-face ((t (:foreground ,simplicity-grey-1))))
+;;;;; Variables
+   `(font-lock-variable-name-face ((t (:foreground ,simplicity-foreground))))
+   `(font-lock-type-face ((t (:foreground ,simplicity-foreground))))
+   `(font-lock-warning-face ((t (:foreground ,simplicity-red :bold t))))
+;;;;; Paren
+   `(show-paren-match
+     ((t (:foreground ,simplicity-background
+          :background ,simplicity-yellow-1))))
+   `(show-paren-mismatch
+     ((t (:foreground ,simplicity-red
+          :weight bold))))
+
+;;;;; Ivy
    `(ivy-minibuffer-match-face-2
      ((t (:foreground ,simplicity-navy
           :background ,simplicity-cyan))))
@@ -166,11 +175,11 @@ Also bind `class' to ((class color) (min-colors 89))."
      ((t (:background ,simplicity-yellow-1
           :foreground ,simplicity-foreground
           :weight bold))))
-   ;; Flycheck
+;;;;; Flycheck
    `(flycheck-posframe-error-face ((t (:foreground ,simplicity-red))))
    `(flycheck-posframe-warning-face ((t (:foreground ,simplicity-yellow))))
    `(flycheck-posframe-info-face ((t (:foreground ,simplicity-green))))
-   ;; Company
+;;;;; Company
    `(company-tooltip
      ((t (:foreground ,simplicity-foreground
           :background ,simplicity-grey+1))))
@@ -188,7 +197,7 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(company-tooltip-annotation-selection
      ((t (:background ,simplicity-grey+1
           :foreground ,simplicity-green))))
-   ;; vTerm
+;;;;; vTerm
    `(vterm-color-black
      ((t (:background ,simplicity-background
           :foreground ,simplicity-grey+1))))
@@ -219,21 +228,21 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(vterm-color-yellow
      ((t (:background ,simplicity-background
           :foreground ,simplicity-yellow))))
-   ;; rainbow-delimiters
+;;;;; rainbow-delimiters
    `(rainbow-delimiters-depth-1-face ((t (:foreground ,simplicity-blue))))
    `(rainbow-delimiters-depth-2-face ((t (:foreground ,simplicity-green))))
    `(rainbow-delimiters-depth-3-face ((t (:foreground ,simplicity-magenta))))
    `(rainbow-delimiters-depth-4-face ((t (:foreground ,simplicity-cyan))))
    `(rainbow-delimiters-depth-5-face ((t (:foreground ,simplicity-yellow))))
    `(rainbow-delimiters-depth-6-face ((t (:foreground ,simplicity-red))))
-   ;; dired
+;;;;; dired
    `(dired-directory
      ((t (:background ,simplicity-background
           :foreground ,simplicity-orange))))
    `(dired-header
      ((t (:background ,simplicity-background
           :foreground ,simplicity-yellow))))
-   ;; diredfl
+;;;;; diredfl
    `(diredfl-dir-name ((t (:inherit dired-directory))))
    `(diredfl-dir-heading ((t (:inherit dired-header))))
    `(diredfl-exec-priv
@@ -275,7 +284,7 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(diredfl-flag-mark
      ((t (:background ,simplicity-background
           :foreground ,simplicity-magenta))))
-   ;; git-gutter
+;;;;; git-gutter
    `(git-gutter-fr:added ((t (:background ,simplicity-green))))
    `(git-gutter-fr:modified ((t (:background ,simplicity-yellow))))
    `(git-gutter-fr:deleted ((t (:background ,simplicity-red))))
