@@ -295,6 +295,5 @@ Also bind `class' to ((class color) (min-colors 89))."
 ;; Local Variables:
 ;; no-byte-compile: t
 ;; indent-tabs-mode: nil
-;; eval: (when (require 'rainbow-mode nil t) (rainbow-mode 1))
 ;; End:
 ;;; simplicity-theme.el ends here
