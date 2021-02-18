@@ -53,21 +53,19 @@ defining them in this alist."
 (defvar simplicity-default-colors-alist
   '(("simplicity-foreground"    . "#e5e5e5")
     ("simplicity-background"    . "#050505")
-    ("simplicity-cyan"          . "#97FFEB")
+    ("simplicity-grey-1"        . "#bdbdbd")
+    ("simplicity-grey"          . "#595959")
+    ("simplicity-grey+1"        . "#403D3D")
+    ("simplicity-grey+2"        . "#1A1A1A")
+    ("simplicity-yellow-1"      . "#fffcb9")
     ("simplicity-yellow"        . "#f2ff2a")
-    ("simplicity-red"           . "#ff25a9")
     ("simplicity-green"         . "#47d400")
     ("simplicity-magenta"       . "#d409fb")
     ("simplicity-orange"        . "#ff5f00")
+    ("simplicity-red"           . "#ff25a9")
+    ("simplicity-cyan"          . "#97FFEB")
     ("simplicity-blue"          . "#68afff")
-    ("simplicify-menu-bg"       . "#fffcb9")
-    ("simplicity-comment-slate" . "#595959")
-    ("simplicity-dark-slate"    . "#403D3D")
-    ("simplicity-mid-gray"      . "#555555")
-    ("simplicity-string"        . "#bdbdbd")
-    ("simplicity-mode-back"     . "#1A1A1A")
-    ("simplicity-menu-bg"       . "#fffcb9")
-    ("simplicity-search-2-fg"   . "#010029"))
+    ("simplicity-navy"          . "#010029"))
   "List of Simplicity colors.")
 
 (defmacro simplicity-with-color-variables (&rest body)
@@ -98,18 +96,18 @@ Also bind `class' to ((class color) (min-colors 89))."
    ;; Modeline
    `(mode-line-inactive
      ((t (:box nil
-          :foreground ,simplicity-mid-gray
+          :foreground ,simplicity-grey
           :background ,simplicity-background))))
    `(mode-line
      ((t (:box nil
           :foreground ,simplicity-foreground
-          :background ,simplicity-mode-back))))
+          :background ,simplicity-grey+2))))
 
    ;; -------------- Code ----------------
    ;; Highlight region color
    `(region
      ((t (:foreground ,simplicity-foreground
-          :background ,simplicity-dark-slate))))
+          :background ,simplicity-grey+1))))
    ;; Dir-ed search prompt
    `(minibuffer-prompt ((default (:foreground ,simplicity-foreground))))
    ;; Builtins
@@ -117,13 +115,13 @@ Also bind `class' to ((class color) (min-colors 89))."
    ;; Constants
    `(font-lock-constant-face ((t (:foreground ,simplicity-foreground))))
    ;; Comments
-   `(font-lock-comment-face ((t (:foreground ,simplicity-comment-slate))))
+   `(font-lock-comment-face ((t (:foreground ,simplicity-grey))))
    ;; Function names
    `(font-lock-function-name-face ((t (:foreground ,simplicity-foreground))))
    ;; Keywords
    `(font-lock-keyword-face ((t (:foreground ,simplicity-foreground))))
    ;; Strings
-   `(font-lock-string-face ((t (:foreground ,simplicity-string))))
+   `(font-lock-string-face ((t (:foreground ,simplicity-grey-1))))
    ;; Variables
    `(font-lock-variable-name-face ((t (:foreground ,simplicity-foreground))))
    `(font-lock-type-face ((t (:foreground ,simplicity-foreground))))
@@ -131,14 +129,14 @@ Also bind `class' to ((class color) (min-colors 89))."
    ;; Paren
    `(show-paren-match
      ((t (:foreground ,simplicity-background
-          :background ,simplicity-menu-bg))))
+          :background ,simplicity-yellow-1))))
    `(show-paren-mismatch
      ((t (:foreground ,simplicity-red
           :weight bold))))
    ;; Line number
    `(line-number
      ((t (:background nil
-          :foreground ,simplicity-comment-slate))))
+          :foreground ,simplicity-grey))))
    `(line-number-current-line
      ((t (:background nil
           :foreground ,simplicity-foreground))))
@@ -158,14 +156,14 @@ Also bind `class' to ((class color) (min-colors 89))."
    ;; ------------ Packages --------------
    ;; Ivy
    `(ivy-minibuffer-match-face-2
-     ((t (:foreground ,simplicity-search-2-fg
+     ((t (:foreground ,simplicity-navy
           :background ,simplicity-cyan))))
    `(ivy-current-match
-     ((t (:background ,simplicity-menu-bg
+     ((t (:background ,simplicity-yellow-1
           :distant-foreground ,simplicity-background
           :weight bold))))
    `(ivy-posframe
-     ((t (:background ,simplicity-menu-bg
+     ((t (:background ,simplicity-yellow-1
           :foreground ,simplicity-foreground
           :weight bold))))
    ;; Flycheck
@@ -175,25 +173,25 @@ Also bind `class' to ((class color) (min-colors 89))."
    ;; Company
    `(company-tooltip
      ((t (:foreground ,simplicity-foreground
-          :background ,simplicity-dark-slate))))
+          :background ,simplicity-grey+1))))
    `(company-tooltip-common
      ((t (:foreground ,simplicity-red
-          :background ,simplicity-dark-slate))))
+          :background ,simplicity-grey+1))))
    `(company-tooltip-selection
-     ((t (:background ,simplicity-dark-slate
+     ((t (:background ,simplicity-grey+1
           :foreground ,simplicity-red))))
-   `(company-scrollbar-bg ((t (:background ,simplicity-dark-slate))))
+   `(company-scrollbar-bg ((t (:background ,simplicity-grey+1))))
    `(company-scrollbar-fg ((t (:background ,simplicity-foreground))))
    `(company-tooltip-annotation
-     ((t (:background ,simplicity-dark-slate
+     ((t (:background ,simplicity-grey+1
           :foreground ,simplicity-green))))
    `(company-tooltip-annotation-selection
-     ((t (:background ,simplicity-dark-slate
+     ((t (:background ,simplicity-grey+1
           :foreground ,simplicity-green))))
    ;; vTerm
    `(vterm-color-black
      ((t (:background ,simplicity-background
-          :foreground ,simplicity-dark-slate))))
+          :foreground ,simplicity-grey+1))))
    `(vterm-color-blue
      ((t (:background ,simplicity-background
           :foreground ,simplicity-blue))))
