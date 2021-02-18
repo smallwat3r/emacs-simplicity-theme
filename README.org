@@ -6,7 +6,7 @@ Please note this theme is still under development. Also PRs & ideas are welcome.
 
 Simplicity is a dark minimalist Emacs theme. Most of the colors have been turned off. Only a touch of a few vivid colors remains (on stuff like errors, search, parenthesis, etc). It's my personal belief that because it gets rid of any distraction, it helps focus on reading and writing code after getting used to it. I also really like the "raw" feeling it provides.
 
-[[[[./screenshots/screenshot-1.png]]]]
+[[./screenshots/screenshot-1.png]]
 
 ** Installation
 
