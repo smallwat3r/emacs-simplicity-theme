@@ -228,6 +228,33 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(vterm-color-yellow
      ((t (:background ,simplicity-background
           :foreground ,simplicity-yellow))))
+;;;;; term
+   `(term-color-black
+     ((t (:background ,simplicity-background
+          :foreground ,simplicity-grey+1))))
+   `(term-color-blue
+     ((t (:background ,simplicity-background
+          :foreground ,simplicity-blue))))
+   `(term-color-cyan
+     ((t (:background ,simplicity-background
+          :foreground ,simplicity-cyan))))
+   `(term-color-green
+     ((t (:background ,simplicity-background
+          :foreground ,simplicity-green))))
+   `(term-color-magenta
+     ((t (:background ,simplicity-background
+          :foreground ,simplicity-magenta))))
+   `(term-color-red
+     ((t (:background ,simplicity-background
+          :foreground ,simplicity-red))))
+   `(term-color-white
+     ((t (:background ,simplicity-background
+          :foreground ,simplicity-foreground))))
+   `(term-color-yellow
+     ((t (:background ,simplicity-background
+          :foreground ,simplicity-yellow))))
+   '(term-default-fg-color ((t (:inherit term-color-white))))
+   '(term-default-bg-color ((t (:inherit term-color-black))))
 ;;;;; rainbow-delimiters
    `(rainbow-delimiters-depth-1-face ((t (:foreground ,simplicity-blue))))
    `(rainbow-delimiters-depth-2-face ((t (:foreground ,simplicity-green))))
