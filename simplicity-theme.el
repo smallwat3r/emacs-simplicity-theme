@@ -311,6 +311,7 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(rainbow-delimiters-depth-8-face ((t (:foreground ,simplicity-blue))))
    `(rainbow-delimiters-depth-9-face ((t (:foreground ,simplicity-green))))
    `(rainbow-delimiters-mismatched-face ((t (:inherit show-paren-mismatch))))
+   `(rainbow-delimiters-unmatched-face ((t (:inherit show-paren-mismatch))))
 ;;;;; dired
    `(dired-directory
      ((t (:background ,simplicity-background
