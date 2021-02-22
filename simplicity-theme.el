@@ -64,6 +64,7 @@ defining them in this alist."
     ("simplicity-orange"        . "#ff5f00")
     ("simplicity-red"           . "#ff25a9")
     ("simplicity-cyan"          . "#97FFEB")
+    ("simplicity-cyan+1"        . "#00ffff")
     ("simplicity-blue"          . "#68afff")
     ("simplicity-navy"          . "#010029"))
   "List of Simplicity colors.")
@@ -97,10 +98,12 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(error ((t (:foreground ,simplicity-red))))
    `(link
      ((t (:background ,simplicity-background
-          :foreground ,simplicity-cyan))))
+          :foreground ,simplicity-cyan+1
+          :underline t))))
    `(link-visited
      ((t (:background ,simplicity-background
-          :foreground ,simplicity-orange))))
+          :foreground ,simplicity-orange
+          :underline t))))
 ;;;;; Modeline
    `(mode-line-inactive
      ((t (:box nil
@@ -123,7 +126,7 @@ Also bind `class' to ((class color) (min-colors 89))."
           :background ,simplicity-yellow
           :weight bold))))
 ;;;;; Dir-ed search prompt
-   `(minibuffer-prompt ((default (:foreground ,simplicity-yellow))))
+   `(minibuffer-prompt ((default (:foreground ,simplicity-foreground))))
 ;;;;; Line number
    `(line-number
      ((t (:background nil
@@ -181,13 +184,34 @@ Also bind `class' to ((class color) (min-colors 89))."
           :foreground ,simplicity-foreground
           :weight bold))))
 ;;;;; Flycheck
+   `(flycheck-error
+     ((((supports :underline (:style wave)))
+       (:underline (:style wave :color ,simplicity-red)
+        :inherit unspecified))
+      (t (:foreground ,simplicity-red
+          :weight bold
+          :underline t))))
    `(flycheck-error-list-error ((t (:foreground ,simplicity-red))))
    `(flycheck-fringe-error ((t (:foreground ,simplicity-red))))
    `(flycheck-posframe-error-face ((t (:foreground ,simplicity-red))))
    `(flycheck-error-list-error-message ((t (:foreground ,simplicity-red))))
+   `(flycheck-info
+     ((((supports :underline (:style wave)))
+       (:underline (:style wave :color ,simplicity-cyan)
+        :inherit unspecified))
+      (t (:foreground ,simplicity-cyan
+          :weight bold
+          :underline t))))
    `(flycheck-error-list-info ((t (:foreground ,simplicity-cyan))))
    `(flycheck-fringe-info ((t (:foreground ,simplicity-cyan))))
    `(flycheck-posframe-info-face ((t (:foreground ,simplicity-cyan))))
+   `(flycheck-warning
+     ((((supports :underline (:style wave)))
+       (:underline (:style wave :color ,simplicity-yellow)
+        :inherit unspecified))
+      (t (:foreground ,simplicity-yellow
+          :weight bold
+          :underline t))))
    `(flycheck-error-list-warning ((t (:foreground ,simplicity-yellow))))
    `(flycheck-fringe-warning ((t (:foreground ,simplicity-yellow))))
    `(flycheck-posframe-warning-face ((t (:foreground ,simplicity-yellow))))
