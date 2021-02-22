@@ -131,7 +131,6 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(line-number-current-line
      ((t (:background nil
           :foreground ,simplicity-foreground))))
-
 ;;;;; Highlight region color
    `(region
      ((t (:foreground ,simplicity-foreground
@@ -160,8 +159,16 @@ Also bind `class' to ((class color) (min-colors 89))."
      ((t (:background ,simplicity-red
           :foreground ,simplicity-foreground
           :weight bold))))
-
 ;;;;; Ivy
+   `(ivy-highlight-face
+     ((t (:foreground ,simplicity-foreground
+          :background ,simplicity-cyan))))
+   `(ivy-minibuffer-match-highlight
+     ((t (:foreground ,simplicity-foreground
+          :background ,simplicity-cyan))))
+   `(ivy-yanked-word
+     ((t (:foreground ,simplicity-foreground
+          :background ,simplicity-cyan))))
    `(ivy-minibuffer-match-face-2
      ((t (:foreground ,simplicity-navy
           :background ,simplicity-cyan))))
@@ -174,13 +181,29 @@ Also bind `class' to ((class color) (min-colors 89))."
           :foreground ,simplicity-foreground
           :weight bold))))
 ;;;;; Flycheck
+   `(flycheck-error-list-error ((t (:foreground ,simplicity-red))))
+   `(flycheck-fringe-error ((t (:foreground ,simplicity-red))))
    `(flycheck-posframe-error-face ((t (:foreground ,simplicity-red))))
+   `(flycheck-error-list-error-message ((t (:foreground ,simplicity-red))))
+   `(flycheck-error-list-info ((t (:foreground ,simplicity-cyan))))
+   `(flycheck-fringe-info ((t (:foreground ,simplicity-cyan))))
+   `(flycheck-posframe-info-face ((t (:foreground ,simplicity-cyan))))
+   `(flycheck-error-list-warning ((t (:foreground ,simplicity-yellow))))
+   `(flycheck-fringe-warning ((t (:foreground ,simplicity-yellow))))
    `(flycheck-posframe-warning-face ((t (:foreground ,simplicity-yellow))))
-   `(flycheck-posframe-info-face ((t (:foreground ,simplicity-green))))
 ;;;;; Company
    `(company-tooltip
      ((t (:foreground ,simplicity-foreground
           :background ,simplicity-grey+1))))
+   `(company-tooltip-mouse
+     ((t (:foreground ,simplicity-background
+          :background ,simplicity-cyan))))
+   `(company-tooltip-search
+     ((t (:foreground ,simplicity-background
+          :background ,simplicity-cyan))))
+   `(company-tooltip-search-selection
+     ((t (:foreground ,simplicity-background
+          :background ,simplicity-cyan))))
    `(company-tooltip-common
      ((t (:foreground ,simplicity-red
           :background ,simplicity-grey+1))))
@@ -268,6 +291,9 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(dired-directory
      ((t (:background ,simplicity-background
           :foreground ,simplicity-orange))))
+   `(dired-flagged
+     ((t (:background ,simplicity-background
+          :foreground ,simplicity-magenta))))
    `(dired-header
      ((t (:background ,simplicity-background
           :foreground ,simplicity-yellow))))
