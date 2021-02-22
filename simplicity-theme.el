@@ -92,12 +92,9 @@ Also bind `class' to ((class color) (min-colors 89))."
           :foreground ,simplicity-background))))
    `(hl-line ((t (:background ,simplicity-background))))
    `(fringe ((t (:background ,simplicity-background))))
-   `(success
-     ((t (:foreground ,simplicity-green
-          :weight bold))))
-   `(warning
-     ((t (:foreground ,simplicity-orange
-          :weight bold))))
+   `(success ((t (:foreground ,simplicity-green))))
+   `(warning ((t (:foreground ,simplicity-orange))))
+   `(error ((t (:foreground ,simplicity-red))))
    `(link
      ((t (:background ,simplicity-background
           :foreground ,simplicity-cyan))))
@@ -160,7 +157,8 @@ Also bind `class' to ((class color) (min-colors 89))."
      ((t (:foreground ,simplicity-background
           :background ,simplicity-yellow-1))))
    `(show-paren-mismatch
-     ((t (:foreground ,simplicity-red
+     ((t (:background ,simplicity-red
+          :foreground ,simplicity-foreground
           :weight bold))))
 
 ;;;;; Ivy
@@ -253,15 +251,19 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(term-color-yellow
      ((t (:background ,simplicity-background
           :foreground ,simplicity-yellow))))
-   '(term-default-fg-color ((t (:inherit term-color-white))))
-   '(term-default-bg-color ((t (:inherit term-color-black))))
+   `(term-default-fg-color ((t (:inherit term-color-white))))
+   `(term-default-bg-color ((t (:inherit term-color-black))))
 ;;;;; rainbow-delimiters
    `(rainbow-delimiters-depth-1-face ((t (:foreground ,simplicity-blue))))
    `(rainbow-delimiters-depth-2-face ((t (:foreground ,simplicity-green))))
    `(rainbow-delimiters-depth-3-face ((t (:foreground ,simplicity-magenta))))
    `(rainbow-delimiters-depth-4-face ((t (:foreground ,simplicity-cyan))))
    `(rainbow-delimiters-depth-5-face ((t (:foreground ,simplicity-yellow))))
-   `(rainbow-delimiters-depth-6-face ((t (:foreground ,simplicity-red))))
+   `(rainbow-delimiters-depth-6-face ((t (:foreground ,simplicity-orange))))
+   `(rainbow-delimiters-depth-7-face ((t (:foreground ,simplicity-red))))
+   `(rainbow-delimiters-depth-8-face ((t (:foreground ,simplicity-blue))))
+   `(rainbow-delimiters-depth-9-face ((t (:foreground ,simplicity-green))))
+   `(rainbow-delimiters-mismatched-face ((t (:inherit show-paren-mismatch))))
 ;;;;; dired
    `(dired-directory
      ((t (:background ,simplicity-background
