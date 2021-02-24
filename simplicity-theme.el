@@ -174,7 +174,8 @@ Also bind `class' to ((class color) (min-colors 89))."
           :background ,simplicity-cyan))))
    `(ivy-minibuffer-match-face-2
      ((t (:foreground ,simplicity-navy
-          :background ,simplicity-cyan))))
+          :background ,simplicity-cyan
+          :weight bold))))
    `(ivy-current-match
      ((t (:background ,simplicity-yellow-1
           :distant-foreground ,simplicity-background
