@@ -164,13 +164,13 @@ Also bind `class' to ((class color) (min-colors 89))."
           :weight bold))))
 ;;;;; Ivy
    `(ivy-highlight-face
-     ((t (:foreground ,simplicity-foreground
+     ((t (:foreground ,simplicity-navy
           :background ,simplicity-cyan))))
    `(ivy-minibuffer-match-highlight
-     ((t (:foreground ,simplicity-foreground
+     ((t (:foreground ,simplicity-navy
           :background ,simplicity-cyan))))
    `(ivy-yanked-word
-     ((t (:foreground ,simplicity-foreground
+     ((t (:foreground ,simplicity-navy
           :background ,simplicity-cyan))))
    `(ivy-minibuffer-match-face-2
      ((t (:foreground ,simplicity-navy
