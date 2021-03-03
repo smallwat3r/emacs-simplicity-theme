@@ -104,6 +104,15 @@ Also bind `class' to ((class color) (min-colors 89))."
      ((t (:background ,simplicity-background
           :foreground ,simplicity-orange
           :underline t))))
+;;;;; Org
+   `(org-block-begin-line
+     ((t (:background ,simplicity-navy
+          :foreground ,simplicity-cyan+1
+          :underline ,simplicity-cyan))))
+   `(org-block-end-line
+     ((t (:background ,simplicity-navy
+          :foreground ,simplicity-cyan+1
+          :overline ,simplicity-cyan))))
 ;;;;; Modeline
    `(mode-line-inactive
      ((t (:box nil
