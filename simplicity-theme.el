@@ -83,7 +83,6 @@ Also bind `class' to ((class color) (min-colors 89))."
 (simplicity-with-color-variables
   (custom-theme-set-faces
    'simplicity
-
 ;;;;; General
    `(default
       ((t (:background ,simplicity-background

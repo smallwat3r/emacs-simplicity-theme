@@ -4,7 +4,10 @@
 
 Simplicity is a dark minimalist Emacs theme. Most of the colors have been turned off. Only a touch of a few vivid colors remains (on stuff like errors, search, parenthesis, etc). It's my personal belief that because it gets rid of any distraction, it helps focus on reading and writing code after getting used to it. I also really like the "raw" feeling it provides.
 
+#+NAME: fig:screenshot-1
+#+CAPTION: Theme demo
 [[./screenshots/screenshot-1.png]]
+
 
 ** Installation
 
@@ -34,6 +37,7 @@ Then load the theme in your ~config.el~ file:
 #+begin_src emacs-lisp
 (setq doom-theme 'simplicity)
 #+end_src
+
 
 ** Customization
 
