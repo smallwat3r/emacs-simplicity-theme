@@ -1,11 +1,12 @@
 ;;; simplicity-theme.el --- A dark minimalist Emacs 24 theme.
 
-;; Copyright (C) 2021 Matthieu Petiteau
+;; Copyright (C) 2021 Matthieu Petiteau <mpetiteau.pro@gmail.com>
 
 ;; Author: Matthieu Petiteau <mpetiteau.pro@gmail.com>
+;; Maintainer: Matthieu Petiteau <mpetiteau.pro@gmail.com>
 ;; Keywords: color, theme, minimal
-;; X-URL: http://github.com/smallwat3r/emacs-simplicity-theme
-;; URL: http://github.com/smallwat3r/emacs-simplicity-theme
+;; Homepage: http://github.com/smallwat3r/emacs-simplicity-theme
+;; Licence: GPL-3.0
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
