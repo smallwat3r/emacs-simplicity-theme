@@ -66,6 +66,7 @@ defining them in this alist."
     ("simplicity-red"           . "#ff25a9")
     ("simplicity-cyan"          . "#97FFEB")
     ("simplicity-cyan+1"        . "#00ffff")
+    ("simplicity-purple"        . "#420dab")
     ("simplicity-blue"          . "#68afff")
     ("simplicity-navy"          . "#010029"))
   "List of Simplicity colors.")
@@ -102,7 +103,7 @@ Also bind `class' to ((class color) (min-colors 89))."
           :underline t))))
    `(link-visited
      ((t (:background ,simplicity-background
-          :foreground ,simplicity-orange
+          :foreground ,simplicity-purple
           :underline t))))
 ;;;;; Org
    `(org-block-begin-line
