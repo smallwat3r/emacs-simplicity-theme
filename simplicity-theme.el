@@ -278,11 +278,13 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(company-scrollbar-bg
      ((t (:background ,simplicity-foreground))))
    `(company-preview
-     ((t (:foreground ,simplicity-grey-1
-          :background ,simplicity-magenta))))
+     ((t (:foreground ,simplicity-cyan
+          :background ,simplicity-background
+          :weight italic))))
    `(company-preview-common
-     ((t (:foreground ,simplicity-grey-1
-          :background ,simplicity-magenta))))
+     ((t (:foreground ,simplicity-cyan
+          :background ,simplicity-background
+          :weight italic))))
 ;;;;; vTerm
    `(vterm-color-black
      ((t (:background ,simplicity-background
