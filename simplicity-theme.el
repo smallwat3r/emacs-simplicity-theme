@@ -429,6 +429,13 @@ Also bind `class' to ((class color) (min-colors 89))."
      ((t (:background ,simplicity-yellow))))
    `(git-gutter-fr:deleted
      ((t (:background ,simplicity-red))))
+;;;;; git-gutter+
+   `(git-gutter+-added
+     ((t (:background ,simplicity-green))))
+   `(git-gutter+-modified
+     ((t (:background ,simplicity-yellow))))
+   `(git-gutter+-deleted
+     ((t (:background ,simplicity-red))))
    ))
 
 ;;;###autoload
