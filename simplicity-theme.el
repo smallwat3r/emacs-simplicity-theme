@@ -280,11 +280,11 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(company-preview
      ((t (:foreground ,simplicity-cyan
           :background ,simplicity-background
-          :weight italic))))
+          :slant italic))))
    `(company-preview-common
      ((t (:foreground ,simplicity-cyan
           :background ,simplicity-background
-          :weight italic))))
+          :slant italic))))
 ;;;;; vTerm
    `(vterm-color-black
      ((t (:background ,simplicity-background
