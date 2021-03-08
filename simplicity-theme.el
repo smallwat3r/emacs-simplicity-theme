@@ -92,11 +92,16 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(cursor
      ((t (:background ,simplicity-cyan
           :foreground ,simplicity-background))))
-   `(hl-line ((t (:background ,simplicity-background))))
-   `(fringe ((t (:background ,simplicity-background))))
-   `(success ((t (:foreground ,simplicity-green))))
-   `(warning ((t (:foreground ,simplicity-orange))))
-   `(error ((t (:foreground ,simplicity-red))))
+   `(hl-line
+     ((t (:background ,simplicity-background))))
+   `(fringe
+     ((t (:background ,simplicity-background))))
+   `(success
+     ((t (:foreground ,simplicity-green))))
+   `(warning
+     ((t (:foreground ,simplicity-orange))))
+   `(error
+     ((t (:foreground ,simplicity-red))))
    `(link
      ((t (:background ,simplicity-background
           :foreground ,simplicity-cyan+1
@@ -136,7 +141,8 @@ Also bind `class' to ((class color) (min-colors 89))."
           :background ,simplicity-yellow
           :weight bold))))
 ;;;;; Dir-ed search prompt
-   `(minibuffer-prompt ((default (:foreground ,simplicity-foreground))))
+   `(minibuffer-prompt
+     ((default (:foreground ,simplicity-foreground))))
 ;;;;; Line number
    `(line-number
      ((t (:background nil
@@ -149,21 +155,30 @@ Also bind `class' to ((class color) (min-colors 89))."
      ((t (:foreground ,simplicity-foreground
           :background ,simplicity-grey+1))))
 ;;;;; Builtins
-   `(font-lock-builtin-face ((t (:foreground ,simplicity-foreground))))
+   `(font-lock-builtin-face
+     ((t (:foreground ,simplicity-foreground))))
 ;;;;; Constants
-   `(font-lock-constant-face ((t (:foreground ,simplicity-foreground))))
+   `(font-lock-constant-face
+     ((t (:foreground ,simplicity-foreground))))
 ;;;;; Comments
-   `(font-lock-comment-face ((t (:foreground ,simplicity-grey))))
+   `(font-lock-comment-face
+     ((t (:foreground ,simplicity-grey))))
 ;;;;; Function names
-   `(font-lock-function-name-face ((t (:foreground ,simplicity-foreground))))
+   `(font-lock-function-name-face
+     ((t (:foreground ,simplicity-foreground))))
 ;;;;; Keywords
-   `(font-lock-keyword-face ((t (:foreground ,simplicity-foreground))))
+   `(font-lock-keyword-face
+     ((t (:foreground ,simplicity-foreground))))
 ;;;;; Strings
-   `(font-lock-string-face ((t (:foreground ,simplicity-grey-1))))
+   `(font-lock-string-face
+     ((t (:foreground ,simplicity-grey-1))))
 ;;;;; Variables
-   `(font-lock-variable-name-face ((t (:foreground ,simplicity-foreground))))
-   `(font-lock-type-face ((t (:foreground ,simplicity-foreground))))
-   `(font-lock-warning-face ((t (:foreground ,simplicity-red :bold t))))
+   `(font-lock-variable-name-face
+     ((t (:foreground ,simplicity-foreground))))
+   `(font-lock-type-face
+     ((t (:foreground ,simplicity-foreground))))
+   `(font-lock-warning-face
+     ((t (:foreground ,simplicity-red :bold t))))
 ;;;;; Paren
    `(show-paren-match
      ((t (:foreground ,simplicity-background
@@ -202,10 +217,14 @@ Also bind `class' to ((class color) (min-colors 89))."
       (t (:foreground ,simplicity-red
           :weight bold
           :underline t))))
-   `(flycheck-error-list-error ((t (:foreground ,simplicity-red))))
-   `(flycheck-fringe-error ((t (:foreground ,simplicity-red))))
-   `(flycheck-posframe-error-face ((t (:foreground ,simplicity-red))))
-   `(flycheck-error-list-error-message ((t (:foreground ,simplicity-red))))
+   `(flycheck-error-list-error
+     ((t (:foreground ,simplicity-red))))
+   `(flycheck-fringe-error
+     ((t (:foreground ,simplicity-red))))
+   `(flycheck-posframe-error-face
+     ((t (:foreground ,simplicity-red))))
+   `(flycheck-error-list-error-message
+     ((t (:foreground ,simplicity-red))))
    `(flycheck-info
      ((((supports :underline (:style wave)))
        (:underline (:style wave :color ,simplicity-cyan)
@@ -213,9 +232,12 @@ Also bind `class' to ((class color) (min-colors 89))."
       (t (:foreground ,simplicity-cyan
           :weight bold
           :underline t))))
-   `(flycheck-error-list-info ((t (:foreground ,simplicity-cyan))))
-   `(flycheck-fringe-info ((t (:foreground ,simplicity-cyan))))
-   `(flycheck-posframe-info-face ((t (:foreground ,simplicity-cyan))))
+   `(flycheck-error-list-info
+     ((t (:foreground ,simplicity-cyan))))
+   `(flycheck-fringe-info
+     ((t (:foreground ,simplicity-cyan))))
+   `(flycheck-posframe-info-face
+     ((t (:foreground ,simplicity-cyan))))
    `(flycheck-warning
      ((((supports :underline (:style wave)))
        (:underline (:style wave :color ,simplicity-yellow)
@@ -223,36 +245,44 @@ Also bind `class' to ((class color) (min-colors 89))."
       (t (:foreground ,simplicity-yellow
           :weight bold
           :underline t))))
-   `(flycheck-error-list-warning ((t (:foreground ,simplicity-yellow))))
-   `(flycheck-fringe-warning ((t (:foreground ,simplicity-yellow))))
-   `(flycheck-posframe-warning-face ((t (:foreground ,simplicity-yellow))))
+   `(flycheck-error-list-warning
+     ((t (:foreground ,simplicity-yellow))))
+   `(flycheck-fringe-warning
+     ((t (:foreground ,simplicity-yellow))))
+   `(flycheck-posframe-warning-face
+     ((t (:foreground ,simplicity-yellow))))
 ;;;;; Company
    `(company-tooltip
-     ((t (:foreground ,simplicity-foreground
-          :background ,simplicity-grey+1))))
-   `(company-tooltip-mouse
-     ((t (:foreground ,simplicity-background
-          :background ,simplicity-cyan))))
-   `(company-tooltip-search
-     ((t (:foreground ,simplicity-background
-          :background ,simplicity-cyan))))
-   `(company-tooltip-search-selection
-     ((t (:foreground ,simplicity-background
-          :background ,simplicity-cyan))))
+     ((t (:background ,simplicity-grey
+          :foreground ,simplicity-foreground))))
    `(company-tooltip-common
-     ((t (:foreground ,simplicity-red
-          :background ,simplicity-grey+1))))
+     ((t (:inherit company-tooltip
+          :foreground ,simplicity-red
+          :weight bold))))
    `(company-tooltip-selection
-     ((t (:background ,simplicity-grey+1
-          :foreground ,simplicity-red))))
-   `(company-scrollbar-bg ((t (:background ,simplicity-grey+1))))
-   `(company-scrollbar-fg ((t (:background ,simplicity-foreground))))
+     ((t (:foreground ,simplicity-background
+          :background ,simplicity-yellow-1
+          :weight bold))))
+   `(company-tooltip-common-selection
+     ((t (:inherit company-tooltip-selection
+          :foreground ,simplicity-navy
+          :weight bold))))
    `(company-tooltip-annotation
-     ((t (:background ,simplicity-grey+1
-          :foreground ,simplicity-green))))
+     ((t (:inherit company-tooltip
+          :foreground ,simplicity-grey-1))))
    `(company-tooltip-annotation-selection
-     ((t (:background ,simplicity-grey+1
-          :foreground ,simplicity-green))))
+     ((t (:inherit company-tooltip-selection
+          :foreground ,simplicity-magenta))))
+   `(company-scrollbar-fg
+     ((t (:background ,simplicity-grey+1))))
+   `(company-scrollbar-bg
+     ((t (:background ,simplicity-foreground))))
+   `(company-preview
+     ((t (:foreground ,simplicity-grey-1
+          :background ,simplicity-magenta))))
+   `(company-preview-common
+     ((t (:foreground ,simplicity-grey-1
+          :background ,simplicity-magenta))))
 ;;;;; vTerm
    `(vterm-color-black
      ((t (:background ,simplicity-background
@@ -309,20 +339,33 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(term-color-yellow
      ((t (:background ,simplicity-background
           :foreground ,simplicity-yellow))))
-   `(term-default-fg-color ((t (:inherit term-color-white))))
-   `(term-default-bg-color ((t (:inherit term-color-black))))
+   `(term-default-fg-color
+     ((t (:inherit term-color-white))))
+   `(term-default-bg-color
+     ((t (:inherit term-color-black))))
 ;;;;; rainbow-delimiters
-   `(rainbow-delimiters-depth-1-face ((t (:foreground ,simplicity-blue))))
-   `(rainbow-delimiters-depth-2-face ((t (:foreground ,simplicity-green))))
-   `(rainbow-delimiters-depth-3-face ((t (:foreground ,simplicity-magenta))))
-   `(rainbow-delimiters-depth-4-face ((t (:foreground ,simplicity-cyan))))
-   `(rainbow-delimiters-depth-5-face ((t (:foreground ,simplicity-yellow))))
-   `(rainbow-delimiters-depth-6-face ((t (:foreground ,simplicity-orange))))
-   `(rainbow-delimiters-depth-7-face ((t (:foreground ,simplicity-red))))
-   `(rainbow-delimiters-depth-8-face ((t (:foreground ,simplicity-blue))))
-   `(rainbow-delimiters-depth-9-face ((t (:foreground ,simplicity-green))))
-   `(rainbow-delimiters-mismatched-face ((t (:inherit show-paren-mismatch))))
-   `(rainbow-delimiters-unmatched-face ((t (:inherit show-paren-mismatch))))
+   `(rainbow-delimiters-depth-1-face
+     ((t (:foreground ,simplicity-blue))))
+   `(rainbow-delimiters-depth-2-face
+     ((t (:foreground ,simplicity-green))))
+   `(rainbow-delimiters-depth-3-face
+     ((t (:foreground ,simplicity-magenta))))
+   `(rainbow-delimiters-depth-4-face
+     ((t (:foreground ,simplicity-cyan))))
+   `(rainbow-delimiters-depth-5-face
+     ((t (:foreground ,simplicity-yellow))))
+   `(rainbow-delimiters-depth-6-face
+     ((t (:foreground ,simplicity-orange))))
+   `(rainbow-delimiters-depth-7-face
+     ((t (:foreground ,simplicity-red))))
+   `(rainbow-delimiters-depth-8-face
+     ((t (:foreground ,simplicity-blue))))
+   `(rainbow-delimiters-depth-9-face
+     ((t (:foreground ,simplicity-green))))
+   `(rainbow-delimiters-mismatched-face
+     ((t (:inherit show-paren-mismatch))))
+   `(rainbow-delimiters-unmatched-face
+     ((t (:inherit show-paren-mismatch))))
 ;;;;; dired
    `(dired-directory
      ((t (:background ,simplicity-background
@@ -334,8 +377,10 @@ Also bind `class' to ((class color) (min-colors 89))."
      ((t (:background ,simplicity-background
           :foreground ,simplicity-yellow))))
 ;;;;; diredfl
-   `(diredfl-dir-name ((t (:inherit dired-directory))))
-   `(diredfl-dir-heading ((t (:inherit dired-header))))
+   `(diredfl-dir-name
+     ((t (:inherit dired-directory))))
+   `(diredfl-dir-heading
+     ((t (:inherit dired-header))))
    `(diredfl-exec-priv
      ((t (:background ,simplicity-background
           :foreground ,simplicity-red))))
@@ -376,9 +421,12 @@ Also bind `class' to ((class color) (min-colors 89))."
      ((t (:background ,simplicity-background
           :foreground ,simplicity-magenta))))
 ;;;;; git-gutter
-   `(git-gutter-fr:added ((t (:background ,simplicity-green))))
-   `(git-gutter-fr:modified ((t (:background ,simplicity-yellow))))
-   `(git-gutter-fr:deleted ((t (:background ,simplicity-red))))
+   `(git-gutter-fr:added
+     ((t (:background ,simplicity-green))))
+   `(git-gutter-fr:modified
+     ((t (:background ,simplicity-yellow))))
+   `(git-gutter-fr:deleted
+     ((t (:background ,simplicity-red))))
    ))
 
 ;;;###autoload
