@@ -206,9 +206,8 @@ Also bind `class' to ((class color) (min-colors 89))."
           :distant-foreground ,simplicity-background
           :weight bold))))
    `(ivy-posframe
-     ((t (:background ,simplicity-yellow-1
-          :foreground ,simplicity-foreground
-          :weight bold))))
+     ((t (:background ,simplicity-grey-1
+          :foreground ,simplicity-foreground))))
 ;;;;; Flycheck
    `(flycheck-error
      ((((supports :underline (:style wave)))
