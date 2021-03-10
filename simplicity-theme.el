@@ -197,9 +197,21 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(ivy-yanked-word
      ((t (:foreground ,simplicity-navy
           :background ,simplicity-cyan))))
+   `(ivy-minibuffer-match-face-1
+     ((t (:foreground ,simplicity-navy
+          :background ,simplicity-cyan+1
+          :weight bold))))
    `(ivy-minibuffer-match-face-2
      ((t (:foreground ,simplicity-navy
           :background ,simplicity-cyan
+          :weight bold))))
+   `(ivy-minibuffer-match-face-3
+     ((t (:foreground ,simplicity-navy
+          :background ,simplicity-green
+          :weight bold))))
+   `(ivy-minibuffer-match-face-4
+     ((t (:foreground ,simplicity-navy
+          :background ,simplicity-yellow
           :weight bold))))
    `(ivy-current-match
      ((t (:background ,simplicity-yellow-1
@@ -207,7 +219,8 @@ Also bind `class' to ((class color) (min-colors 89))."
           :weight bold))))
    `(ivy-posframe
      ((t (:background ,simplicity-grey-1
-          :foreground ,simplicity-foreground))))
+          :foreground ,simplicity-background
+          :box (:color ,simplicity-cyan :line-width -1)))))
 ;;;;; Flycheck
    `(flycheck-error
      ((((supports :underline (:style wave)))
