@@ -198,9 +198,8 @@ Also bind `class' to ((class color) (min-colors 89))."
      ((t (:foreground ,simplicity-navy
           :background ,simplicity-cyan))))
    `(ivy-minibuffer-match-face-1
-     ((t (:foreground ,simplicity-navy
-          :background ,simplicity-cyan+1
-          :weight bold))))
+     ((t (:foreground ,simplicity-foreground
+          :background ,simplicity-background))))
    `(ivy-minibuffer-match-face-2
      ((t (:foreground ,simplicity-navy
           :background ,simplicity-cyan
@@ -218,9 +217,10 @@ Also bind `class' to ((class color) (min-colors 89))."
           :distant-foreground ,simplicity-background
           :weight bold))))
    `(ivy-posframe
-     ((t (:background ,simplicity-grey-1
-          :foreground ,simplicity-background
-          :box (:color ,simplicity-cyan :line-width -1)))))
+     ((t (:background ,simplicity-navy
+          :foreground ,simplicity-foreground))))
+   `(ivy-posframe-border
+     ((t (:background ,simplicity-navy))))
 ;;;;; Flycheck
    `(flycheck-error
      ((((supports :underline (:style wave)))
@@ -382,8 +382,7 @@ Also bind `class' to ((class color) (min-colors 89))."
      ((t (:inherit show-paren-mismatch))))
 ;;;;; dired
    `(dired-directory
-     ((t (:background ,simplicity-background
-          :foreground ,simplicity-orange))))
+     ((t (:foreground ,simplicity-orange))))
    `(dired-flagged
      ((t (:background ,simplicity-background
           :foreground ,simplicity-magenta))))
