@@ -111,6 +111,10 @@ Also bind `class' to ((class color) (min-colors 89))."
      ((t (:background ,simplicity-background
           :foreground ,simplicity-purple
           :underline t))))
+   `(highlight
+     ((t (:background ,simplicity-background
+          :foreground ,simplicity-foreground
+          :box (:line-width 1 :color ,simplicity-yellow)))))
 ;;;;; Org
    `(org-block-begin-line
      ((t (:background ,simplicity-navy
