@@ -54,6 +54,7 @@ defining them in this alist."
 (defvar simplicity-default-colors-alist
   '(("simplicity-foreground"    . "#e5e5e5")
     ("simplicity-background"    . "#050505")
+    ("simplicity-white"         . "#ffffff")
     ("simplicity-grey-1"        . "#bdbdbd")
     ("simplicity-grey"          . "#595959")
     ("simplicity-grey+1"        . "#403D3D")
@@ -132,13 +133,15 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(isearch
      ((t (:foreground ,simplicity-background
           :background ,simplicity-yellow
+          :box (:line-width 2 :color ,simplicity-cyan)
           :weight bold))))
    `(isearch-fail
      ((t (:foreground ,simplicity-red
           :bold t))))
    `(lazy-highlight
-     ((t (:foreground ,simplicity-background
-          :background ,simplicity-yellow
+     ((t (:foreground ,simplicity-foreground
+          :background ,simplicity-background
+          :box (:line-width 2 :color ,simplicity-cyan)
           :weight bold))))
 ;;;;; Dir-ed search prompt
    `(minibuffer-prompt
@@ -181,41 +184,44 @@ Also bind `class' to ((class color) (min-colors 89))."
      ((t (:foreground ,simplicity-red :bold t))))
 ;;;;; Paren
    `(show-paren-match
-     ((t (:foreground ,simplicity-background
-          :background ,simplicity-yellow-1))))
+     ((t (:foreground ,simplicity-cyan+1
+          :background ,simplicity-background
+          :underline (:color ,simplicity-cyan+1)
+          :weight bold))))
    `(show-paren-mismatch
      ((t (:background ,simplicity-red
           :foreground ,simplicity-foreground
+          :box (:line-width 1 :color ,simplicity-red)
           :weight bold))))
 ;;;;; Ivy
-   `(ivy-highlight-face
-     ((t (:foreground ,simplicity-navy
-          :background ,simplicity-cyan))))
-   `(ivy-minibuffer-match-highlight
-     ((t (:foreground ,simplicity-navy
-          :background ,simplicity-cyan))))
-   `(ivy-yanked-word
-     ((t (:foreground ,simplicity-navy
-          :background ,simplicity-cyan))))
-   `(ivy-minibuffer-match-face-1
-     ((t (:foreground ,simplicity-foreground
-          :background ,simplicity-navy))))
-   `(ivy-minibuffer-match-face-2
-     ((t (:foreground ,simplicity-cyan
-          :background ,simplicity-navy
-          :weight bold))))
-   `(ivy-minibuffer-match-face-3
-     ((t (:foreground ,simplicity-green
-          :background ,simplicity-navy
-          :weight bold))))
-   `(ivy-minibuffer-match-face-4
-     ((t (:foreground ,simplicity-yellow
-          :background ,simplicity-navy
-          :weight bold))))
    `(ivy-current-match
-     ((t (:background ,simplicity-yellow-1
-          :distant-foreground ,simplicity-background
+     ((t (:background ,simplicity-background
+          :foreground ,simplicity-white
+          :box (:line-width 2 :color ,simplicity-cyan)
           :weight bold))))
+   `(ivy-minibuffer-match-highlight
+     ((t (:inherit ivy-current-match
+          :background ,simplicity-background
+          :foreground ,simplicity-foreground
+          :weight bold))))
+   `(ivy-yanked-word
+     ((t (:inherit ivy-current-match
+          :background ,simplicity-yellow-1))))
+   `(ivy-minibuffer-match-face-1
+     ((t (:inherit ivy-current-match
+          :background ,simplicity-background))))
+   `(ivy-minibuffer-match-face-2
+     ((t (:inherit ivy-current-match
+          :background ,simplicity-background
+          :foreground ,simplicity-cyan))))
+   `(ivy-minibuffer-match-face-3
+     ((t (:inherit ivy-current-match
+          :background ,simplicity-background
+          :foreground ,simplicity-green))))
+   `(ivy-minibuffer-match-face-4
+     ((t (:inherit ivy-current-match
+          :background ,simplicity-background
+          :foreground ,simplicity-yellow))))
 ;;;;; Ivy-posframe
    `(ivy-posframe
      ((t (:background ,simplicity-navy
@@ -225,7 +231,8 @@ Also bind `class' to ((class color) (min-colors 89))."
 ;;;;; Swiper
    `(swiper-line-face
      ((t (:background ,simplicity-background
-          :foreground ,simplicity-yellow-1
+          :foreground ,simplicity-foreground
+          :box (:line-width 2 :color ,simplicity-yellow)
           :weight bold))))
 ;;;;; Flycheck
    `(flycheck-error
@@ -271,19 +278,20 @@ Also bind `class' to ((class color) (min-colors 89))."
      ((t (:foreground ,simplicity-yellow))))
 ;;;;; Company
    `(company-tooltip
-     ((t (:background ,simplicity-grey
+     ((t (:background ,simplicity-grey+2
           :foreground ,simplicity-foreground))))
    `(company-tooltip-common
      ((t (:inherit company-tooltip
-          :foreground ,simplicity-red
+          :foreground ,simplicity-white
           :weight bold))))
    `(company-tooltip-selection
-     ((t (:foreground ,simplicity-background
-          :background ,simplicity-yellow-1
+     ((t (:foreground ,simplicity-foreground
+          :box (:line-width 2 :color ,simplicity-cyan)
+          :background ,simplicity-grey+2
           :weight bold))))
    `(company-tooltip-common-selection
      ((t (:inherit company-tooltip-selection
-          :foreground ,simplicity-navy
+          :foreground ,simplicity-white
           :weight bold))))
    `(company-tooltip-annotation
      ((t (:inherit company-tooltip
@@ -292,9 +300,9 @@ Also bind `class' to ((class color) (min-colors 89))."
      ((t (:inherit company-tooltip-selection
           :foreground ,simplicity-magenta))))
    `(company-scrollbar-fg
-     ((t (:background ,simplicity-grey+1))))
+     ((t (:background ,simplicity-grey))))
    `(company-scrollbar-bg
-     ((t (:background ,simplicity-foreground))))
+     ((t (:background ,simplicity-grey-1))))
    `(company-preview
      ((t (:foreground ,simplicity-cyan
           :background ,simplicity-background
