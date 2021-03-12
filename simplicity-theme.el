@@ -199,28 +199,34 @@ Also bind `class' to ((class color) (min-colors 89))."
           :background ,simplicity-cyan))))
    `(ivy-minibuffer-match-face-1
      ((t (:foreground ,simplicity-foreground
-          :background ,simplicity-background))))
+          :background ,simplicity-navy))))
    `(ivy-minibuffer-match-face-2
-     ((t (:foreground ,simplicity-navy
-          :background ,simplicity-cyan
+     ((t (:foreground ,simplicity-cyan
+          :background ,simplicity-navy
           :weight bold))))
    `(ivy-minibuffer-match-face-3
-     ((t (:foreground ,simplicity-navy
-          :background ,simplicity-green
+     ((t (:foreground ,simplicity-green
+          :background ,simplicity-navy
           :weight bold))))
    `(ivy-minibuffer-match-face-4
-     ((t (:foreground ,simplicity-navy
-          :background ,simplicity-yellow
+     ((t (:foreground ,simplicity-yellow
+          :background ,simplicity-navy
           :weight bold))))
    `(ivy-current-match
      ((t (:background ,simplicity-yellow-1
           :distant-foreground ,simplicity-background
           :weight bold))))
+;;;;; Ivy-posframe
    `(ivy-posframe
-     ((t (:background ,simplicity-background
+     ((t (:background ,simplicity-navy
           :foreground ,simplicity-foreground))))
    `(ivy-posframe-border
      ((t (:background ,simplicity-cyan))))
+;;;;; Swiper
+   `(swiper-line-face
+     ((t (:background ,simplicity-background
+          :foreground ,simplicity-yellow-1
+          :weight bold))))
 ;;;;; Flycheck
    `(flycheck-error
      ((((supports :underline (:style wave)))
