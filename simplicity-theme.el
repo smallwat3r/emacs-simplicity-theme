@@ -457,13 +457,6 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(diredfl-flag-mark
      ((t (:background ,simplicity-background
           :foreground ,simplicity-magenta))))
-;;;;; git-gutter-fringe
-   `(git-gutter-fr:added
-     ((t (:background ,simplicity-green))))
-   `(git-gutter-fr:modified
-     ((t (:background ,simplicity-yellow))))
-   `(git-gutter-fr:deleted
-     ((t (:background ,simplicity-red))))
 ;;;;; git-gutter
    `(git-gutter:added
      ((t (:foreground ,simplicity-green
@@ -474,6 +467,13 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(git-gutter:deleted
      ((t (:foreground ,simplicity-red
           :background ,simplicity-background))))
+;;;;; git-gutter-fringe
+   `(git-gutter-fr:added
+     ((t (:inherit git-gutter:added))))
+   `(git-gutter-fr:modified
+     ((t (:inherit git-gutter:modified))))
+   `(git-gutter-fr:deleted
+     ((t (:inherit git-gutter:deleted))))
 ;;;;; git-gutter+
    `(git-gutter+-added
      ((t (:inherit git-gutter:added))))
