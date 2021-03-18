@@ -113,8 +113,8 @@ Also bind `class' to ((class color) (min-colors 89))."
           :underline t))))
    `(highlight
      ((t (:background ,simplicity-background
-          :foreground ,simplicity-foreground
-          :box (:line-width 1 :color ,simplicity-yellow)))))
+          :foreground ,simplicity-yellow
+          :underline t))))
 ;;;;; Org
    `(org-block-begin-line
      ((t (:background ,simplicity-navy
@@ -135,17 +135,16 @@ Also bind `class' to ((class color) (min-colors 89))."
           :background ,simplicity-grey+2))))
 ;;;;; Search
    `(isearch
-     ((t (:foreground ,simplicity-background
-          :background ,simplicity-yellow
-          :box (:line-width 2 :color ,simplicity-cyan)
+     ((t (:foreground ,simplicity-yellow
+          :background ,simplicity-background
+          :underline t
           :weight bold))))
    `(isearch-fail
      ((t (:foreground ,simplicity-red
           :bold t))))
    `(lazy-highlight
-     ((t (:foreground ,simplicity-foreground
+     ((t (:foreground ,simplicity-yellow
           :background ,simplicity-background
-          :box (:line-width 2 :color ,simplicity-cyan)
           :weight bold))))
 ;;;;; Dir-ed search prompt
    `(minibuffer-prompt
@@ -238,6 +237,13 @@ Also bind `class' to ((class color) (min-colors 89))."
           :foreground ,simplicity-foreground
           :box (:line-width 2 :color ,simplicity-yellow)
           :weight bold))))
+;;;;; Eshell
+   `(eshell-syntax-highlighting-alias-face
+     ((t (:background ,simplicity-background
+          :foreground ,simplicity-cyan))))
+   `(eshell-syntax-highlighting-command-face
+     ((t (:background ,simplicity-background
+          :foreground ,simplicity-green))))
 ;;;;; Flycheck
    `(flycheck-error
      ((((supports :underline (:style wave)))
