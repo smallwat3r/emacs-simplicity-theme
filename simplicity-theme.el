@@ -52,23 +52,25 @@ defining them in this alist."
           :value-type (string :tag " Hex")))
 
 (defvar simplicity-default-colors-alist
-  '(("simplicity-foreground"    . "#e5e5e5")
-    ("simplicity-background"    . "#050505")
+  '(("simplicity-foreground"    . "#eeeeee")
+    ("simplicity-background"    . "#000000")
+    ("simplicity-comment"       . "#b4a7d6")
+    ("simplicity-string"        . "#d3e0bc")
     ("simplicity-white"         . "#ffffff")
-    ("simplicity-grey-1"        . "#bdbdbd")
+    ("simplicity-grey-1"        . "#dddddd")
     ("simplicity-grey"          . "#595959")
     ("simplicity-grey+1"        . "#403D3D")
     ("simplicity-grey+2"        . "#1A1A1A")
     ("simplicity-yellow-1"      . "#fffcb9")
     ("simplicity-yellow"        . "#f2ff2a")
-    ("simplicity-green"         . "#47d400")
-    ("simplicity-magenta"       . "#d409fb")
+    ("simplicity-green"         . "#b6d7a8")
+    ("simplicity-magenta"       . "#d7b3d8")
     ("simplicity-orange"        . "#ff5f00")
     ("simplicity-red"           . "#ff25a9")
     ("simplicity-cyan"          . "#97FFEB")
     ("simplicity-cyan+1"        . "#00ffff")
     ("simplicity-purple"        . "#420dab")
-    ("simplicity-blue"          . "#68afff")
+    ("simplicity-blue"          . "#aaddd2")
     ("simplicity-navy"          . "#010029"))
   "List of Simplicity colors.")
 
@@ -112,9 +114,9 @@ Also bind `class' to ((class color) (min-colors 89))."
           :foreground ,simplicity-purple
           :underline t))))
    `(highlight
-     ((t (:background ,simplicity-background
-          :foreground ,simplicity-yellow
-          :underline t))))
+     ((t (:background ,simplicity-grey+2
+          :foreground ,simplicity-white
+          :weight bold))))
 ;;;;; Org
    `(org-block-begin-line
      ((t (:background ,simplicity-navy
@@ -127,26 +129,25 @@ Also bind `class' to ((class color) (min-colors 89))."
 ;;;;; Modeline
    `(mode-line-inactive
      ((t (:box nil
-          :foreground ,simplicity-grey
-          :background ,simplicity-background))))
+          :foreground ,simplicity-background
+          :background ,simplicity-grey))))
    `(mode-line
      ((t (:box nil
-          :foreground ,simplicity-foreground
-          :background ,simplicity-grey+2))))
+          :foreground ,simplicity-background
+          :background ,simplicity-grey-1))))
 ;;;;; Search
    `(isearch
-     ((t (:foreground ,simplicity-yellow
-          :background ,simplicity-background
-          :underline t
+     ((t (:foreground ,simplicity-navy
+          :background ,simplicity-yellow-1
           :weight bold))))
    `(isearch-fail
      ((t (:foreground ,simplicity-red
           :bold t))))
    `(lazy-highlight
-     ((t (:foreground ,simplicity-yellow
-          :background ,simplicity-background
+     ((t (:foreground ,simplicity-navy
+          :background ,simplicity-yellow-1
           :weight bold))))
-;;;;; Dir-ed search prompt
+;;;;; Dired search prompt
    `(minibuffer-prompt
      ((default (:foreground ,simplicity-foreground))))
 ;;;;; Line number
@@ -168,7 +169,9 @@ Also bind `class' to ((class color) (min-colors 89))."
      ((t (:foreground ,simplicity-foreground))))
 ;;;;; Comments
    `(font-lock-comment-face
-     ((t (:foreground ,simplicity-grey))))
+     ((t (:foreground ,simplicity-comment))))
+   `(font-lock-doc-face
+     ((t (:foreground ,simplicity-comment))))
 ;;;;; Function names
    `(font-lock-function-name-face
      ((t (:foreground ,simplicity-foreground))))
@@ -177,7 +180,7 @@ Also bind `class' to ((class color) (min-colors 89))."
      ((t (:foreground ,simplicity-foreground))))
 ;;;;; Strings
    `(font-lock-string-face
-     ((t (:foreground ,simplicity-grey-1))))
+     ((t (:foreground ,simplicity-string))))
 ;;;;; Variables
    `(font-lock-variable-name-face
      ((t (:foreground ,simplicity-foreground))))
@@ -185,22 +188,22 @@ Also bind `class' to ((class color) (min-colors 89))."
      ((t (:foreground ,simplicity-foreground))))
    `(font-lock-warning-face
      ((t (:foreground ,simplicity-red :bold t))))
-;;;;; Paren
+;;;;; Parenthesis
    `(show-paren-match
-     ((t (:foreground ,simplicity-cyan+1
-          :background ,simplicity-background
-          :underline (:color ,simplicity-cyan+1)
+     ((t (:foreground ,simplicity-navy
+          :background ,simplicity-cyan
+          :underline (:color ,simplicity-cyan)
           :weight bold))))
    `(show-paren-mismatch
      ((t (:background ,simplicity-red
           :foreground ,simplicity-foreground
-          :box (:line-width 1 :color ,simplicity-red)
+          :underline (:color ,simplicity-red)
           :weight bold))))
 ;;;;; Ivy
    `(ivy-current-match
      ((t (:background ,simplicity-background
           :foreground ,simplicity-white
-          :box (:line-width 2 :color ,simplicity-cyan)
+          :underline (:color ,simplicity-cyan)
           :weight bold))))
    `(ivy-minibuffer-match-highlight
      ((t (:inherit ivy-current-match
@@ -233,9 +236,8 @@ Also bind `class' to ((class color) (min-colors 89))."
      ((t (:background ,simplicity-cyan))))
 ;;;;; Swiper
    `(swiper-line-face
-     ((t (:background ,simplicity-background
+     ((t (:background ,simplicity-navy
           :foreground ,simplicity-foreground
-          :box (:line-width 2 :color ,simplicity-yellow)
           :weight bold))))
 ;;;;; Eshell
    `(eshell-syntax-highlighting-alias-face
@@ -295,24 +297,20 @@ Also bind `class' to ((class color) (min-colors 89))."
           :foreground ,simplicity-white
           :weight bold))))
    `(company-tooltip-selection
-     ((t (:foreground ,simplicity-foreground
-          :box (:line-width 2 :color ,simplicity-cyan)
-          :background ,simplicity-grey+2
+     ((t (:foreground ,simplicity-white
+          :background ,simplicity-grey+1
           :weight bold))))
    `(company-tooltip-common-selection
-     ((t (:inherit company-tooltip-selection
-          :foreground ,simplicity-white
-          :weight bold))))
+     ((t (:inherit company-tooltip-selection))))
    `(company-tooltip-annotation
      ((t (:inherit company-tooltip
-          :foreground ,simplicity-grey-1))))
+          :foreground ,simplicity-string))))
    `(company-tooltip-annotation-selection
-     ((t (:inherit company-tooltip-selection
-          :foreground ,simplicity-magenta))))
+     ((t (:inherit company-tooltip-selection))))
    `(company-scrollbar-fg
      ((t (:background ,simplicity-grey))))
    `(company-scrollbar-bg
-     ((t (:background ,simplicity-grey-1))))
+     ((t (:background ,simplicity-string))))
    `(company-preview
      ((t (:foreground ,simplicity-cyan
           :background ,simplicity-background

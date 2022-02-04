@@ -2,7 +2,7 @@
 
 ** About
 
-Simplicity is a dark minimalist Emacs theme. Most of the colors have been turned off. Only a touch of a few vivid colors remains (on stuff like errors, search, parenthesis, etc). It's my personal belief that because it gets rid of any distraction, it helps focus on reading and writing code after getting used to it. I also really like the "raw" feeling it provides.
+Simplicity is a minimalist Emacs dark theme. Most of the colors have been turned off. Only a touch of colors remains (on stuff like strings, comments, errors, search etc). It's my personal belief that removing colors gets rid of any distraction and helps focus on reading and writing code after getting used to it. I also like the "raw" feeling it provides.
 
 ** Previews
 
@@ -53,11 +53,11 @@ Then load the theme in your ~config.el~ file:
 
 You can tweak the theme by changing a few colors by defining new values in the ~simplicity-override-colors-alist~ variable before loading the theme.
 
-For example, for a very high contrast theme:
+For example:
 #+begin_src emacs-lisp
 (setq simplicity-override-colors-alist
-      '(("simplicity-background" . "#000000")   ; full dark bg
-        ("simplicity-foreground" . "#ffffff"))) ; full light fg
+      '(("simplicity-comment" . "green")
+        ("simplicity-foreground" . "#ffffff")))
 (load-theme 'simplicity t)
 #+end_src
 
