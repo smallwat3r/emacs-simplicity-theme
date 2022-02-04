@@ -2,7 +2,7 @@
 
 ** About
 
-Simplicity is a minimalist dark theme. Most of the colors have been turned off. Only a touch of colors remains (on stuff like strings, comments, errors, search etc). It's my personal belief that removing colors gets rid of any distraction and helps focus on reading and writing code after getting used to it. I also like the "raw" feeling it provides.
+Simplicity is a minimalist dark theme. Most of the colors have been turned off. Only a few touch of colors remains (on stuff like strings, comments, errors, search etc). It's my personal belief that removing colors gets rid of any distraction and helps focus on reading and writing code after getting used to it. I also like the "raw" feeling it provides.
 
 ** Previews
 
