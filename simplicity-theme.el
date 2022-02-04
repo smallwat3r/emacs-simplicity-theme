@@ -117,7 +117,14 @@ Also bind `class' to ((class color) (min-colors 89))."
      ((t (:background ,simplicity-grey+2
           :foreground ,simplicity-white
           :weight bold))))
+;;;;; Markdown
+   `(markdown-pre-face
+     ((t (:foreground ,simplicity-string))))
+   `(markdown-inline-code-face
+     ((t (:foreground ,simplicity-string))))
 ;;;;; Org
+   `(org-code
+     ((t (:foreground ,simplicity-string))))
    `(org-block-begin-line
      ((t (:background ,simplicity-navy
           :foreground ,simplicity-cyan+1
