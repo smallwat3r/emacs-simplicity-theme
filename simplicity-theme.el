@@ -1,11 +1,12 @@
-;;; simplicity-theme.el --- A dark minimalist Emacs 24 theme.
+;;; simplicity-theme.el --- A minimalist dark theme
 
 ;; Copyright (C) 2021 Matthieu Petiteau <mpetiteau.pro@gmail.com>
 
 ;; Author: Matthieu Petiteau <mpetiteau.pro@gmail.com>
 ;; Maintainer: Matthieu Petiteau <mpetiteau.pro@gmail.com>
-;; Keywords: color, theme, minimal
+;; Keywords: faces, theme, minimal
 ;; Homepage: http://github.com/smallwat3r/emacs-simplicity-theme
+;; Version: 0.1.0
 ;; Licence: GPL-3.0
 
 ;; This program is free software; you can redistribute it and/or modify
@@ -478,8 +479,7 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(git-gutter+-modified
      ((t (:inherit git-gutter:modified))))
    `(git-gutter+-deleted
-     ((t (:inherit git-gutter:deleted))))
-   ))
+     ((t (:inherit git-gutter:deleted))))))
 
 ;;;###autoload
 (when load-file-name
