@@ -33,7 +33,7 @@
 (unless (>= emacs-major-version 24)
   (error "Requires Emacs 24 or later"))
 
-(deftheme simplicity "A dark minimalist theme")
+(deftheme simplicity "A dark minimalist theme.")
 
 (defgroup simplicity-theme nil
   "Simplicity theme."
