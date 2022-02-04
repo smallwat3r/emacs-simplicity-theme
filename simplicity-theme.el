@@ -1,4 +1,4 @@
-;;; simplicity-theme.el --- A minimalist dark theme
+;;; simplicity-theme.el --- A minimalist dark theme  -*- lexical-binding: t -*-
 
 ;; Copyright (C) 2021 Matthieu Petiteau <mpetiteau.pro@gmail.com>
 
@@ -7,6 +7,7 @@
 ;; Keywords: faces, theme, minimal
 ;; Homepage: http://github.com/smallwat3r/emacs-simplicity-theme
 ;; Version: 0.1.0
+;; Package-Requires: ((emacs "24.1"))
 ;; Licence: GPL-3.0
 
 ;; This program is free software; you can redistribute it and/or modify
@@ -30,8 +31,6 @@
 ;; getting used to it.
 
 ;;; Code:
-(unless (>= emacs-major-version 24)
-  (error "Requires Emacs 24 or later"))
 
 (deftheme simplicity "A minimalist dark theme.")
 
@@ -490,8 +489,4 @@ Also bind `class' to ((class color) (min-colors 89))."
 
 (provide-theme 'simplicity)
 
-;; Local Variables:
-;; no-byte-compile: t
-;; indent-tabs-mode: nil
-;; End:
 ;;; simplicity-theme.el ends here
