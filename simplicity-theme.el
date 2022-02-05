@@ -204,6 +204,9 @@ Also bind `class' to ((class color) (min-colors 89))."
           :foreground ,simplicity-foreground
           :underline (:color ,simplicity-red)
           :weight bold))))
+;;;;; sh
+   `(sh-quoted-exec
+     ((t (:foreground ,simplicity-yellow-1 :bold t))))
 ;;;;; Ivy
    `(ivy-current-match
      ((t (:background ,simplicity-background
