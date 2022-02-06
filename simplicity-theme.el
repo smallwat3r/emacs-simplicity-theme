@@ -147,14 +147,26 @@ Also bind `class' to ((class color) (min-colors 89))."
           :weight bold))))
    `(isearch-fail
      ((t (:foreground ,simplicity-red
-          :bold t))))
+          :weight bold))))
    `(lazy-highlight
      ((t (:foreground ,simplicity-navy
           :background ,simplicity-yellow-1
           :weight bold))))
+;;;;; XML
+   `(nxml-element-local-name
+     ((t (:foreground ,simplicity-yellow-1))))
+   `(nxml-tag-delimiter
+     ((t (:foreground ,simplicity-yellow-1))))
+;;;;; Web-mode
+   `(web-mode-html-tag-face
+     ((t (:foreground ,simplicity-yellow-1))))
+   `(web-mode-html-tag-bracket-face
+     ((t (:foreground ,simplicity-yellow-1))))
+   `(web-mode-html-attr-name-face
+     ((t (:foreground ,simplicity-foreground))))
 ;;;;; Dired search prompt
    `(minibuffer-prompt
-     ((default (:foreground ,simplicity-foreground))))
+     ((t (:foreground ,simplicity-foreground))))
 ;;;;; Line number
    `(line-number
      ((t (:background nil
@@ -192,7 +204,7 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(font-lock-type-face
      ((t (:foreground ,simplicity-foreground))))
    `(font-lock-warning-face
-     ((t (:foreground ,simplicity-red :bold t))))
+     ((t (:foreground ,simplicity-red :weight bold))))
 ;;;;; Parenthesis
    `(show-paren-match
      ((t (:foreground ,simplicity-navy
@@ -206,7 +218,7 @@ Also bind `class' to ((class color) (min-colors 89))."
           :weight bold))))
 ;;;;; sh
    `(sh-quoted-exec
-     ((t (:foreground ,simplicity-yellow-1 :bold t))))
+     ((t (:foreground ,simplicity-yellow-1 :weight bold))))
 ;;;;; Ivy
    `(ivy-current-match
      ((t (:background ,simplicity-background
@@ -488,7 +500,7 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(git-gutter+-deleted
      ((t (:inherit git-gutter:deleted))))))
 
-;;;###autoload
+;;###autoload
 (when load-file-name
   (add-to-list 'custom-theme-load-path
                (file-name-as-directory (file-name-directory load-file-name)))
