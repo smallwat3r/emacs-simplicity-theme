@@ -42,44 +42,44 @@
   :tag "Simplicity theme")
 
 ;;;###autoload
-(defcustom simplicity-override-colors-alist '()
-  "Place to override default theme colors.
+(eval-and-compile
+  (defcustom simplicity-override-colors-alist '()
+    "Place to override default theme colors.
 You can override a subset of the theme's default colors by
 defining them in this alist."
-  :group 'simplicity-theme
-  :type '(alist
-          :key-type (string :tag "Name")
-          :value-type (string :tag " Hex")))
+    :group 'simplicity-theme
+    :type '(alist
+            :key-type (string :tag "Name")
+            :value-type (string :tag " Hex"))))
 
-(defvar simplicity-default-colors-alist
-  '(("simplicity-foreground"    . "#eeeeee")
-    ("simplicity-background"    . "#000000")
-    ("simplicity-comment"       . "#b4a7d6")
-    ("simplicity-string"        . "#d3e0bc")
-    ("simplicity-white"         . "#ffffff")
-    ("simplicity-grey-1"        . "#dddddd")
-    ("simplicity-grey"          . "#595959")
-    ("simplicity-grey+1"        . "#403D3D")
-    ("simplicity-grey+2"        . "#1A1A1A")
-    ("simplicity-yellow-1"      . "#fffcb9")
-    ("simplicity-yellow"        . "#f2ff2a")
-    ("simplicity-green"         . "#b6d7a8")
-    ("simplicity-magenta"       . "#d7b3d8")
-    ("simplicity-orange"        . "#ff5f00")
-    ("simplicity-red"           . "#ff25a9")
-    ("simplicity-cyan"          . "#97FFEB")
-    ("simplicity-cyan+1"        . "#00ffff")
-    ("simplicity-purple"        . "#420dab")
-    ("simplicity-blue"          . "#aaddd2")
-    ("simplicity-navy"          . "#010029"))
-  "List of Simplicity colors.")
+(eval-and-compile
+  (defvar simplicity-default-colors-alist
+    '(("simplicity-foreground"    . "#eeeeee")
+      ("simplicity-background"    . "#000000")
+      ("simplicity-comment"       . "#b4a7d6")
+      ("simplicity-string"        . "#d3e0bc")
+      ("simplicity-white"         . "#ffffff")
+      ("simplicity-grey-1"        . "#dddddd")
+      ("simplicity-grey"          . "#595959")
+      ("simplicity-grey+1"        . "#403D3D")
+      ("simplicity-grey+2"        . "#1A1A1A")
+      ("simplicity-yellow-1"      . "#fffcb9")
+      ("simplicity-yellow"        . "#f2ff2a")
+      ("simplicity-green"         . "#b6d7a8")
+      ("simplicity-magenta"       . "#d7b3d8")
+      ("simplicity-orange"        . "#ff5f00")
+      ("simplicity-red"           . "#ff25a9")
+      ("simplicity-cyan"          . "#97FFEB")
+      ("simplicity-cyan+1"        . "#00ffff")
+      ("simplicity-purple"        . "#420dab")
+      ("simplicity-blue"          . "#aaddd2")
+      ("simplicity-navy"          . "#010029"))
+    "List of Simplicity colors."))
 
 (defmacro simplicity-with-color-variables (&rest body)
-  "`let' bind all colors defined in `simplicity-colors-alist' around BODY.
-Also bind `class' to ((class color) (min-colors 89))."
+  "Binds all simplicity colors around BODY."
   (declare (indent 0))
-  `(let ((class '((class color) (min-colors 89)))
-         ,@(mapcar (lambda (cons)
+  `(let (,@(mapcar (lambda (cons)
                      (list (intern (car cons)) (cdr cons)))
                    (append simplicity-default-colors-alist
                            simplicity-override-colors-alist)))
@@ -151,6 +151,10 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(lazy-highlight
      ((t (:foreground ,simplicity-navy
           :background ,simplicity-yellow-1
+          :weight bold))))
+   `(pdf-isearch-match
+     ((t (:foreground ,simplicity-navy
+          :background ,simplicity-cyan
           :weight bold))))
 ;;;;; XML
    `(nxml-element-local-name
