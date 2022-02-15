@@ -1,6 +1,6 @@
 #+TITLE: simplicity-theme for Emacs
 
-[![MELPA](https://melpa.org/packages/simplicity-theme-badge.svg)](https://melpa.org/#/simplicity-theme)
+[[https://melpa.org/#/simplicity-theme][file:https://melpa.org/packages/simplicity-theme-badge.svg]]
 
 ** About
 
@@ -25,7 +25,7 @@ Simplicity is a minimalist dark theme. Most of the colors have been turned off. 
 
 *** Melpa
 
-A melpa [https://melpa.org/#/simplicity-theme][package]] is available for simplicity-theme.
+A melpa [[https://melpa.org/#/simplicity-theme][package]] is available for simplicity-theme.
 
 *** From the Git repository
 
