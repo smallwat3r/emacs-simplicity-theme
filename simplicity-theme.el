@@ -370,8 +370,8 @@ defining them in this alist."
      ((t (:background ,simplicity-background
           :foreground ,simplicity-red))))
    `(vterm-color-white
-     ((t (:background "white"
-          :foreground "white"))))
+     ((t (:background ,simplicity-background
+          :foreground ,simplicity-foreground))))
    `(vterm-color-yellow
      ((t (:background ,simplicity-background
           :foreground ,simplicity-yellow))))
