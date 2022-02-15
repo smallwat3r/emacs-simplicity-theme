@@ -1,5 +1,7 @@
 #+TITLE: simplicity-theme for Emacs
 
+[![MELPA](https://melpa.org/packages/simplicity-theme-badge.svg)](https://melpa.org/#/simplicity-theme)
+
 ** About
 
 Simplicity is a minimalist dark theme. Most of the colors have been turned off. Only a few touch of colors remains (on stuff like strings, comments, errors, search etc). It's my personal belief that removing colors gets rid of any distraction and helps focus on reading and writing code after getting used to it. I also like the "raw" feeling it provides.
@@ -21,6 +23,10 @@ Simplicity is a minimalist dark theme. Most of the colors have been turned off. 
 
 ** Installation
 
+*** Melpa
+
+A melpa [https://melpa.org/#/simplicity-theme][package]] is available for simplicity-theme.
+
 *** From the Git repository
 
 Clone the repository:
@@ -38,9 +44,7 @@ And add the following to your ~.emacs~ file:
 
 Add the following to your ~packages.el~ file:
 #+begin_src emacs-lisp
-(package! simplicity-theme :recipe
-  (:host github
-   :repo "smallwat3r/emacs-simplicity-theme"))
+(package! simplicity-theme)
 #+end_src
 
 Then load the theme in your ~config.el~ file:
