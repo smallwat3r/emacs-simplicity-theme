@@ -25,7 +25,7 @@
 
 ;;; Commentary:
 
-;; A dark minimalist Emacs 24 theme.
+;; A minimalist dark theme for Emacs.
 ;; Most of the colors have been turned off, which gets rid of any
 ;; distraction and improve focus on reading and writing code after
 ;; getting used to it.
@@ -45,6 +45,7 @@
 (eval-and-compile
   (defcustom simplicity-override-colors-alist '()
     "Place to override default theme colors.
+
 You can override a subset of the theme's default colors by
 defining them in this alist."
     :group 'simplicity-theme
