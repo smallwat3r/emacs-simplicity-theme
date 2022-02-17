@@ -346,59 +346,59 @@ defining them in this alist."
           :slant italic))))
 ;;;;; vTerm
    `(vterm-color-black
-     ((t (:background ,simplicity-background
-          :foreground ,simplicity-grey+1))))
+     ((t (:background "gray35"
+          :foreground "gray35"))))
    `(vterm-color-blue
-     ((t (:background ,simplicity-background
+     ((t (:background ,simplicity-blue
           :foreground ,simplicity-blue))))
    `(vterm-color-cyan
-     ((t (:background ,simplicity-background
+     ((t (:background ,simplicity-cyan
           :foreground ,simplicity-cyan))))
    `(vterm-color-default
      ((t (:background ,simplicity-background
           :foreground ,simplicity-foreground))))
    `(vterm-color-green
-     ((t (:background ,simplicity-background
+     ((t (:background ,simplicity-green
           :foreground ,simplicity-green))))
    `(vterm-color-inverse-video
      ((t (:background ,simplicity-background
           :inverse-video t))))
    `(vterm-color-magenta
-     ((t (:background ,simplicity-background
+     ((t (:background ,simplicity-magenta
           :foreground ,simplicity-magenta))))
    `(vterm-color-red
-     ((t (:background ,simplicity-background
+     ((t (:background ,simplicity-red
           :foreground ,simplicity-red))))
    `(vterm-color-white
-     ((t (:background ,simplicity-background
-          :foreground ,simplicity-foreground))))
+     ((t (:background "gray65"
+          :foreground "gray65"))))
    `(vterm-color-yellow
-     ((t (:background ,simplicity-background
+     ((t (:background ,simplicity-yellow
           :foreground ,simplicity-yellow))))
 ;;;;; term
    `(term-color-black
-     ((t (:background ,simplicity-background
-          :foreground ,simplicity-grey+1))))
+     ((t (:background "gray35"
+          :foreground "gray35"))))
    `(term-color-blue
-     ((t (:background ,simplicity-background
+     ((t (:background ,simplicity-blue
           :foreground ,simplicity-blue))))
    `(term-color-cyan
-     ((t (:background ,simplicity-background
+     ((t (:background ,simplicity-cyan
           :foreground ,simplicity-cyan))))
    `(term-color-green
-     ((t (:background ,simplicity-background
+     ((t (:background ,simplicity-green
           :foreground ,simplicity-green))))
    `(term-color-magenta
-     ((t (:background ,simplicity-background
+     ((t (:background ,simplicity-magenta
           :foreground ,simplicity-magenta))))
    `(term-color-red
-     ((t (:background ,simplicity-background
+     ((t (:background ,simplicity-red
           :foreground ,simplicity-red))))
    `(term-color-white
-     ((t (:background ,simplicity-background
-          :foreground ,simplicity-foreground))))
+     ((t (:background "gray65"
+          :foreground "gray65"))))
    `(term-color-yellow
-     ((t (:background ,simplicity-background
+     ((t (:background ,simplicity-yellow
           :foreground ,simplicity-yellow))))
    `(term-default-fg-color
      ((t (:inherit term-color-white))))
