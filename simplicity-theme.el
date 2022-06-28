@@ -55,7 +55,7 @@ defining them in this alist."
 
 (eval-and-compile
   (defvar simplicity-default-colors-alist
-    '(("simplicity-foreground"    . "#e4e4e4")
+    '(("simplicity-foreground"    . "#ffffff")
       ("simplicity-background"    . "#000000")
       ("simplicity-comment"       . "#b4a7d6")
       ("simplicity-string"        . "#d3e0bc")
