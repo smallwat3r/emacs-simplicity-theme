@@ -503,7 +503,14 @@ defining them in this alist."
    `(git-gutter+-modified
      ((t (:inherit git-gutter:modified))))
    `(git-gutter+-deleted
-     ((t (:inherit git-gutter:deleted))))))
+     ((t (:inherit git-gutter:deleted))))
+;;;;; eglot
+  `(eglot-mode-line
+    ((t (:inherit font-lock-constant-face
+         :weight bold
+         :foreground ,simplicity-background
+         :background ,simplicity-grey-1))))))
+
 
 ;;;###autoload
 (when load-file-name
