@@ -506,10 +506,8 @@ defining them in this alist."
      ((t (:inherit git-gutter:deleted))))
 ;;;;; eglot
   `(eglot-mode-line
-    ((t (:inherit font-lock-constant-face
-         :weight bold
-         :foreground ,simplicity-background
-         :background ,simplicity-grey-1))))))
+    ((t (:foreground ,simplicity-background
+         :weight bold))))))
 
 
 ;;;###autoload
